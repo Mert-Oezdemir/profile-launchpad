@@ -1,0 +1,37 @@
+:root { color-scheme: light; --blue: #123070; --light: #e9f0ff; --ink: #14254a; --orange: #f4ad5d; --paper: #fbfcff; --line: #a9b9d8; font-family: "Segoe UI", system-ui, sans-serif; }
+* { box-sizing: border-box; }
+body { background: var(--paper); color: var(--ink); margin: 0; }
+header, main, footer { width: min(70rem, 100% - 2rem); margin-inline: auto; }
+header { padding: 1rem 0; border-bottom: 2px solid var(--blue); font-weight: 740; }
+.mark { display: inline-grid; place-content: center; margin-right: .45rem; background: var(--orange); border-radius: 50%; width: 1.6rem; height: 1.6rem; }
+h1 { font-size: clamp(2.55rem, 7.5vw, 6.9rem); line-height: .94; letter-spacing: -.07em; margin: clamp(2.2rem, 6vw, 5rem) 0 0; max-width: 14ch; }
+.lead { margin-bottom: 2.2rem; line-height: 1.55; }
+.layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr); align-items: start; border-top: 2px solid var(--blue); }
+.editor, .preview { padding: clamp(1.1rem, 3vw, 2.25rem); }
+.editor { padding-inline-start: 0; }
+.preview { background: var(--light); border-radius: 0 0 .9rem .9rem; }
+h2 { margin: 0 0 1.2rem; font-size: 1.4rem; }
+h3 { font-size: 1rem; }
+form { display: grid; gap: .5rem; }
+label { font-weight: 670; }
+small { color: #4d5e7b; margin-inline-start: .35rem; font-weight: 400; }
+input, textarea { width: 100%; min-width: 0; padding: .65rem .75rem; color: inherit; font: inherit; border: 1px solid var(--line); border-radius: .26rem; background: #fff; margin-bottom: .5rem; }
+textarea { resize: vertical; }
+.actions { display: flex; gap: .55rem; flex-wrap: wrap; }
+button { padding: .6rem .8rem; font: 650 .87rem system-ui; cursor: pointer; border-radius: .28rem; background: var(--blue); color: white; border: 1px solid var(--blue); }
+#copy { background: #fff; color: var(--blue); }
+:focus-visible { outline: 3px solid #1952b4; outline-offset: 3px; }
+.sheet { background: white; border: 1px solid var(--line); border-left: .4rem solid var(--orange); min-height: 18rem; padding: clamp(1rem, 3.5vw, 2.5rem); overflow-wrap: anywhere; }
+.signature { margin: 0; font: 400 clamp(2rem, 6vw, 4.5rem)/.98 Georgia, serif; letter-spacing: -.05em; }
+.role { color: #1b4b9e; font-weight: 700; }
+#preview-bio { white-space: pre-wrap; line-height: 1.6; }
+.sheet ul { padding-inline-start: 1.15rem; }
+details { margin-top: 1rem; }
+summary { cursor: pointer; font-weight: 620; }
+#markdown { margin-top: .7rem; font-family: ui-monospace, monospace; font-size: .88rem; }
+#status { min-height: 1.4rem; margin-bottom: 0; }
+footer { padding: 1.2rem 0 2rem; font-size: .85rem; color: #4d5e7b; }
+@media (max-width: 47rem) {
+  .layout { grid-template-columns: 1fr; }
+  .editor { padding-inline-end: 0; }
+}

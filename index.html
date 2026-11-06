@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile Launchpad</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header><span class="mark" aria-hidden="true">↗</span> Profile Launchpad</header>
+  <main>
+    <h1>Put your work up front.</h1>
+    <p class="lead">Write a short GitHub profile and download a ready-to-use README.</p>
+    <div class="layout">
+      <section aria-labelledby="edit-heading" class="editor">
+        <h2 id="edit-heading">Your profile</h2>
+        <form id="profile">
+          <label for="name">Display name</label>
+          <input id="name" maxlength="72" placeholder="Your name">
+          <label for="role">What you do</label>
+          <input id="role" maxlength="120" placeholder="For example, interactive developer">
+          <label for="bio">Short introduction</label>
+          <textarea id="bio" rows="4" maxlength="500"></textarea>
+          <label for="work">Selected work <small>One project per line</small></label>
+          <textarea id="work" rows="4" maxlength="700" placeholder="Project name and what it does"></textarea>
+          <label for="website">Website <small>Optional https:// link</small></label>
+          <input id="website" type="url" maxlength="250" placeholder="https://example.com">
+          <div class="actions">
+            <button type="submit">Download README.md</button>
+            <button type="button" id="copy">Copy Markdown</button>
+          </div>
+        </form>
+        <p id="status" role="status"></p>
+      </section>
+      <section class="preview" aria-labelledby="preview-heading">
+        <h2 id="preview-heading">Preview</h2>
+        <div class="sheet">
+          <p id="preview-name" class="signature"></p>
+          <p id="preview-role" class="role"></p>
+          <p id="preview-bio"></p>
+          <div id="preview-work" hidden>
+            <h3>Selected work</h3>
+            <ul></ul>
+          </div>
+          <p id="preview-website" hidden></p>
+        </div>
+        <details>
+          <summary>View Markdown</summary>
+          <textarea id="markdown" readonly rows="10" aria-label="Generated Markdown"></textarea>
+        </details>
+      </section>
+    </div>
+  </main>
+  <footer>Your draft stays in this page until you download or copy it.</footer>
+</body>
+</html>
